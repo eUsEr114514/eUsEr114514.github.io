@@ -1,0 +1,45 @@
+* {
+    padding: 0; /* 重置边距 */
+    margin: 0;
+}
+.center {
+    background-color: antiquewhite;
+    color: white;
+    height: 97.5vh;
+    background-image: url("picture/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.center h1 {
+    font-size: 75px;
+}
+.center h4 {
+    color:aliceblue;
+    font-size: 25px;
+    margin: 20px 0;
+}
+.center a {
+    color:white;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+footer {
+    background-color: rgb(76, 47, 47);
+    color: white;
+    height: 20px;
+}
+footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    overflow-y: hidden; /* 隐藏水平滚动条 */
+}
