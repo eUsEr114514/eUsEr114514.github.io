@@ -1,0 +1,56 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #f4f4f4;
+}
+#nav {
+    width: 200px; /* 导航栏的宽度 */
+    height: 100%; /* 导航栏的高度，设置为全屏高度 */
+    background-color: #333; /* 导航栏的背景颜色 */
+    color: white;
+    padding: 20px;
+    position: fixed; /* 固定定位 */
+    top: 0; /* 从顶部开始 */
+    left: 0; /* 从左侧开始 */
+    overflow-y: auto; /* 如果内容超出，出现垂直滚动条 */
+}
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 8px 0;
+}
+#nav ul li a:hover {
+    background-color: #555;
+}
+#content {
+    margin-left: 250px; /* 内容区域的左边距，应比导航栏宽稍大以显示滚动条 */
+    padding: 20px;
+    height: 100%;
+    background-color: #f4f4f4;
+    overflow: auto; /* 如果内容超出，出现滚动条 */
+}
+
+/*.like-button {*/
+/*    position: fixed; !* 固定定位 *!*/
+/*    right: 20px; !* 距离右侧20px *!*/
+/*    bottom: 20px; !* 距离底部20px *!*/
+/*    padding: 10px 20px;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    background-color: #FFC107; !* 点赞按钮的颜色 *!*/
+/*    color: white;*/
+/*    cursor: pointer;*/
+/*    transition: transform 0.3s; !* 过渡动画 *!*/
+/*}*/
+/*.like-button:active {*/
+/*    transform: scale(0.75); !* 点击时的缩放效果 *!*/
+/*}*/

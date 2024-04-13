@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/* border边框，padding内边距，margin外边距 */
+header {
+    background-color: rgb(46, 17, 17, 1.75);
+    color: white;
+    height: 10vh;
+}
+h1 {
+    position: absolute;
+    left: 120px;
+    top: 0;
+    line-height: 75px;
+}
+.introduce {
+    height: 97.5vh;
+    background-color: antiquewhite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.introduce p {
+    font-size: 15px;
+}
+footer {
+    background-color: rgb(76, 47, 47);
+    color: white;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+section {
+    background-color: aqua;
+    border: 5px #458347 dashed;
+    padding: 25px;
+    margin:30px;
+    height:75px;
+    width:100%;
+}
+section a {
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+}
+section li {
+    display:inline;
+    margin: right 4vw;
+}
+section a:hover {
+    text-decoration:underline;
+}
+footer {
+    background-color: #d48a8a;
+    border:2px #246326 solid;
+    padding: 25px;
+    margin:30px;
+}
+h1 {
+    color:white;
+}
+h2 {
+    color:red;
+    font-size:25px;
+} */
