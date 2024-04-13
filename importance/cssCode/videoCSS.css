@@ -32,7 +32,7 @@ body {
     background-color: #555;
 }
 #content {
-    margin-left: 250px; /* 内容区域的左边距，应比导航栏宽稍大以显示滚动条 */
+    margin-left: 10%; /* 内容区域的左边距，应比导航栏宽稍大以显示滚动条 */
     padding: 20px;
     height: 100%;
     background-color: #f4f4f4;
