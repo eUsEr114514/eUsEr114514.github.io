@@ -4,7 +4,7 @@
 }
 /* border边框，padding内边距，margin外边距 */
 header {
-    background-color: rgb(46, 17, 17, 1.75);
+    background-color: rgb(0, 0, 0);
     color: white;
     height: 10vh;
 }
@@ -16,6 +16,7 @@ h1 {
 }
 .introduce {
     height: 97.5vh;
+    background-image: url("picture/milky-way-3840x2160-15490.jpg");
     background-color: antiquewhite;
     background-repeat: no-repeat;
     background-size: cover;
