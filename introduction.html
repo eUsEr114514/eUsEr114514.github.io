@@ -1,32 +1,111 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--这两行内容为编译器自动添加（创建新html文件后打一个!然后按Tab）-->
-    <title>电子的个人网页</title>
-    <link rel="stylesheet" href="cssCode/styleIntroduction.css">
+    <title>电子的家DZ's home</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .background-image {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-image: url('https://img2.imgtp.com/2024/05/03/ZAyXUuS0.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 1; /* 背景图片位于底层 */
+        }
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */
+            padding: 20px;
+            border: 1px solid #000; /* 黑色边框 */
+            border-radius: 40px;
+            text-align: center;
+            z-index: 2; /* 内容区块位于背景图片之上 */
+            overflow: hidden; /* 防止模糊效果超出内容区块 */
+            width: 55%;
+            height: 45%;
+        }
+        .content::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5); /* 与内容区块背景相同 */
+            filter: blur(75px); /* 应用模糊效果 */
+            z-index: -1; /* 模糊效果位于内容区块的底层 */
+            border-radius: 10px; /* 模糊效果的边界也具有圆角 */
+        }
+        .content img {
+            width: 50px;
+            height: 50px;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0);
+            padding: 10px;
+            text-align: center;
+            z-index: 3;
+        }
+        .footer img {
+            max-width: 100px; /* 音乐图片的最大宽度 */
+            max-height: 100px; /* 音乐图片的最大高度 */
+            border-radius: 114px;
+        }
+        .footer audio {
+            width: 50%; /* 音乐播放器宽度 */
+            margin-top: 0px;
+        }
+    </style>
+    <script>
+        function print() {
+            alert("QQ：316951535");
+        }
+    </script>
 </head>
 <body>
-    <header>
-        <h1>电子的个人网页</h1>
-    </header>
-    <main>
-        <section class="introduce">
-            <div class="text">
-                <p>中文名：电子</p>
-                <p>英文名：Electron</p>
-                <p>年龄：16（出生日期：2007年7月5日）</p>
-                <p>职业：学生</p>
-                <p>目前状况：高二下学期（实时更新）</p>
-                <p>我的bilibili个人主页：<a href="https://space.bilibili.com/553343171" target="_blank">https://bilibili.com</a></p>
-                <p>我的抖音个人主页：<a href="https://www.douyin.com/user/MS4wLjABAAAASMvQCRAzLp1_daonfImRs1oVREuPWd6s2yqTCIvog1uGW9hr69UmAz9WRnvmcWsX" target="_blank">https://www.douyin.com</a></p>
-                <p>我的邮箱：316951535@qq.com</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>本网站用Visual Studio Code编译器编写，开始编写时间为2024.3.17</p>
-    </footer>
+
+<div class="background-image"></div>
+<div class="content">
+    <h1>电子的个人信息</h1>
+    <p>中文名：电子</p>
+    <p>英文名：ELectron</p>
+    <p>年龄：16（出生日期：2007年7月5日）</p>
+    <p>职业：学生（目前状况高二下学期）</p>
+    <p>社交媒体：</p>
+    <a href="https://space.bilibili.com/553343171" target="_blank"><img src="https://img2.imgtp.com/2024/05/03/tT0ynRMm.png" alt="Bilibili" /></a>
+    <a href="https://www.douyin.com/user/MS4wLjABAAAASMvQCRAzLp1_daonfImRs1oVREuPWd6s2yqTCIvog1uGW9hr69UmAz9WRnvmcWsX" target="_blank"><img src="https://img2.imgtp.com/2024/05/03/4rK67zFm.png" alt="抖音" /></a>
+    <a href="https://twitter.com/MCElectron75" target="_blank"><img src="https://img2.imgtp.com/2024/05/03/HZKRgzr4.png" alt="Twitter(X)" /></a>
+    <a href="https://www.youtube.com/channel/UCdNLWyFidLNexbgjuwbiwWg" target="_blank"><img src="https://img2.imgtp.com/2024/05/03/kNZayvYo.png" alt="YouTube" /></a>
+    <a href="#" onclick="print()"><img src="https://img2.imgtp.com/2024/05/03/zxWRDPMw.png" alt="QQ" /></a>
+<!--    <a href="" target="_blank"><img src="" alt="" /></a>-->
+<!--    <a href="" target="_blank"><img src="" alt="" /></a>-->
+<!--    <a href="" target="_blank"><img src="" alt="" /></a>-->
+<!--    <a href="" target="_blank"><img src="" alt="" /></a>-->
+</div>
+<div class="footer">
+    <img src="http://p3.music.126.net/OjiWGpbpC80EbQgkxEayiA==/109951164152228527.jpg" alt="Music Cover">
+    <p>Daylight - Seredris</p>
+    <audio controls>
+        <source src="Daylight-Seredris.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
 </body>
 </html>
