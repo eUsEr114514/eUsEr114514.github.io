@@ -10,6 +10,9 @@
             padding: 0;
             height: 100%;
         }
+        /*button {*/
+        /*    z-index: 2;*/
+        /*}*/
         .background-image {
             position: fixed;
             left: 0;
@@ -35,6 +38,7 @@
             overflow: hidden; /* 防止模糊效果超出内容区块 */
             width: 55%;
             height: 45%;
+            /*overflow-y: scroll; !* 添加垂直滚动条 *!*/
         }
         .content::after {
             content: '';
@@ -58,30 +62,86 @@
             right: 0;
             bottom: 0;
             background: rgba(0, 0, 0, 0);
-            padding: 10px;
+            padding: 0px;
             text-align: center;
             z-index: 3;
         }
         .footer img {
-            max-width: 100px; /* 音乐图片的最大宽度 */
-            max-height: 100px; /* 音乐图片的最大高度 */
+            max-width: 10vh; /* 音乐图片的最大宽度 */
+            max-height: 10vh; /* 音乐图片的最大高度 */
             border-radius: 114px;
         }
         .footer audio {
             width: 50%; /* 音乐播放器宽度 */
             margin-top: 0px;
         }
-        /* 媒体查询：为移动设备竖屏模式设置样式 */
-        @media (max-width: 768px) {
-            .content {
-                top: 35%;
-                height: 65%;
-            }
+        /* 隐藏垂直滚动条 */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        /* 自定义滚动条轨道 */
+        ::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+        /* 自定义滚动条滑块 */
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 5px;
+        }
+        /* 模拟滚动内容 */
+        .content {
+            height: 45%; /* 用于演示滚动效果 */
+            overflow-y: scroll;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3); /* 半透明黑色背景 */
+            padding: 10px; /* 一些内边距 */
+            text-align: center;
+            overflow: hidden;
+            max-height: 0; /* 默认高度为0 */
+            transition: max-height 0.3s ease; /* 平滑过渡效果 */
+        }
+
+        .footer.expanded {
+            max-height: 150px; /* 展开时的最大高度，根据内容调整 */
+
+        }
+
+        .footer img {
+            max-width: 50px; /* 音乐图片的最大宽度，根据需要调整 */
+            max-height: 50px; /* 音乐图片的最大高度，根据需要调整 */
+            border-radius: 75px; /* 圆角 */
+        }
+
+        .footer audio {
+            width: 100%; /* 音乐播放器宽度 */
+            margin-top: 10px;
+        }
+        button {
+            padding: 1% 2%; /* 按钮内部的空间 */
+            margin: 0.1%; /* 按钮外部的空间 */
+            background-color: #0051ff; /* 按钮的背景颜色 */
+            color: white; /* 按钮上文字的颜色 */
+            border: 1px solid #3498db; /* 按钮的边框颜色及样式 */
+            border-radius: 75px; /* 按钮的圆角 */
+            cursor: pointer; /* 鼠标悬停时显示为手形，表示可点击 */
+            font-size: 1%; /* 按钮上文字的大小 */
+        }
+        button:hover {
+            background-color: #a100ff; /* 鼠标悬浮时的背景颜色 */
+            border-color: #ebff00; /* 鼠标悬浮时的边框颜色 */
         }
     </style>
     <script>
-        function print() {
+        function printQQ() {
             alert("QQ：316951535");
+        }
+        function printMail() {
+            alert("Outlook邮箱：electrondz75@outlook.com")
         }
     </script>
 </head>
@@ -89,30 +149,38 @@
 
 <div class="background-image"></div>
 <div class="content">
+    <button onclick="toggleFooter()">点击展开/收缩下方音乐</button>
     <h1>电子的个人信息</h1>
     <p>中文名：电子</p>
     <p>英文名：ELectron</p>
     <p>年龄：16（出生日期：2007年7月5日）</p>
-    <p>职业：学生（目前状况：高二下学期）</p>
+    <p>职业：学生（目前状况高二下学期）</p>
     <p>联系方式：</p>
     <a href="https://space.bilibili.com/553343171" target="_blank"><img src="https://img2.imgtp.com/2024/05/03/tT0ynRMm.png" alt="Bilibili" /></a>
     <a href="https://www.douyin.com/user/MS4wLjABAAAASMvQCRAzLp1_daonfImRs1oVREuPWd6s2yqTCIvog1uGW9hr69UmAz9WRnvmcWsX" target="_blank"><img src="https://img2.imgtp.com/2024/05/03/4rK67zFm.png" alt="抖音" /></a>
     <a href="https://twitter.com/MCElectron75" target="_blank"><img src="https://img2.imgtp.com/2024/05/03/HZKRgzr4.png" alt="Twitter(X)" /></a>
     <a href="https://www.youtube.com/channel/UCdNLWyFidLNexbgjuwbiwWg" target="_blank"><img src="https://img2.imgtp.com/2024/05/03/kNZayvYo.png" alt="YouTube" /></a>
-    <a href="#" onclick="print()"><img src="https://img2.imgtp.com/2024/05/03/zxWRDPMw.png" alt="QQ" /></a>
+    <a href="#" onclick="printQQ()"><img src="https://img2.imgtp.com/2024/05/03/zxWRDPMw.png" alt="QQ" /></a>
     <a href="https://github.com/eUsEr114514" target="_blank"><img src="https://img2.imgtp.com/2024/05/04/GyLfa293.png" alt="Github" /></a>
+    <a href="#" onclick="printMail()"><img src="https://img2.imgtp.com/2024/05/04/GfNdnUSD.png" alt="Outlook邮箱" /></a>
 <!--    <a href="" target="_blank"><img src="" alt="" /></a>-->
 <!--    <a href="" target="_blank"><img src="" alt="" /></a>-->
-<!--    <a href="" target="_blank"><img src="" alt="" /></a>-->
+
 </div>
 <div class="footer">
-    <img src="http://p3.music.126.net/OjiWGpbpC80EbQgkxEayiA==/109951164152228527.jpg" alt="Music Cover">
+    <img src="http://p3.music.126.net/OjiWGpbpC80EbQgkxEayiA==/109951164152228527.jpg" alt="专辑图片">
     <p>Daylight - Seredris</p>
     <audio controls>
         <source src="Daylight-Seredris.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 </div>
-
+<!--    <button onclick="toggleFooter()">点击此处展开/收缩 Footer</button>-->
+<script>
+    function toggleFooter() {
+        var footer = document.querySelector('.footer');
+        footer.classList.toggle('expanded');
+    }
+</script>
 </body>
 </html>
