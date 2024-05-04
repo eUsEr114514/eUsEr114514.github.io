@@ -4,55 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>资源导向</title>
-    <link rel="stylesheet" href="cssCode/styleSources.css">
-    <script src="javascript/jsSources.js"></script>
+    <style>
+        .nested-content {
+            display: none; /* 默认不显示嵌套内容 */
+            padding-left: 20px;
+        }
+
+        .show {
+            display: block; /* 显示嵌套内容 */
+        }
+
+        .hide {
+            display: none; /* 隐藏嵌套内容 */
+        }
+    </style>
+    <script>
+        function toggleContent(elementId) {
+            var content = document.getElementById(elementId);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
-    <h1>这里就是电子的资源导向啦</h1>
-    <h2>暂时没有用CSS美化啦</h2>
-    <p>只有一层展开，不会嵌套，还是用AI写的，呜呜呜</p>
-    <p>
-        这里是电子的Edge浏览器收藏夹：<span class="expand-button" onclick="toggleExpandable()">展开 ↓</span>
-    </p>
-    <div class="edge">
-        <!-- 展开项内容 -->
-        <p>ColorBlock：<a href="https://mc.ecylt.top/" target="_blank">https://mc.ecylt.top/</a></p>
-        <p>CurseForge-Mod：<a href="https://www.curseforge.com/minecraft" target="_blank">https://www.curseforge.com/minecraft</a></p>
-        <p>OpenFRP：<a href="https://console.openfrp.net/dashboard" target="_blank">https://console.openfrp.net/dashboard</a></p>
-        <p>PythonDocument：<a href="https://docs.python.org/zh-cn/3.11/" target="_blank">https://docs.python.org/zh-cn/3.11/</a></p>
-        <p>GitHub：<a href="https://github.com/" target="_blank">https://github.com/</a></p>
-        <p>CodeForces：<a href="https://codeforces.com/" target="_blank">https://codeforces.com/</a></p>
-        <p>DotCpp：<a href="https://www.dotcpp.com/" target="_blank">https://www.dotcpp.com/</a></p>
-        <p>Numpy：<a href="https://numpy.org/" target="_blank">https://numpy.org/</a></p>
-        <p>菜鸟教程：<a href="https://www.runoob.com/" target="_blank">https://www.runoob.com/</a></p>
-        <p>AlternativeTo：<a href="https://alternativeto.net/" target="_blank">https://alternativeto.net/</a></p>
-        <p>TIOBE编程语言排行榜：<a href="https://tiobe.p2hp.com/" target="_blank">https://tiobe.p2hp.com/</a></p>
-        <p>神奇的Vue.js教程：<a href="https://scrimba.com/playlist/pXKqta" target="_blank">https://scrimba.com/playlist/pXKqta</a></p>
-        <p>LookAE：<a href="https://www.lookae.com/" target="_blank">https://www.lookae.com/</a></p>
-        <p>Doyoudo：<a href="https://doyoudo.com/free" target="_blank">https://doyoudo.com/free</a></p>
-        <p>音效网：<a href="https://www.aigei.com/sound/?wd=%E8%80%B3%E8%81%86%E7%BD%91" target="_blank">https://www.aigei.com/sound/?wd=%E8%80%B3%E8%81%86%E7%BD%91</a></p>
-        <p>阿虚同学的储物间：<a href="https://axutongxue.gitee.io/" target="_blank">https://axutongxue.gitee.io/</a></p>
-        <p>考拉软件：<a href="https://www.rjctx.com/" target="_blank">https://www.rjctx.com/</a></p>
-        <p>Yandex：<a href="https://yandex.com/" target="_blank">https://yandex.com/</a></p>
-        <p>Tbox资源导航：<a href="https://www.tboxn.com/" target="_blank">https://www.tboxn.com/</a></p>
-        <p>Tbox资源导航：<a href="https://webflow.com/" target="_blank">https://webflow.com/</a></p>
-        <p>在问AI：<a href="https://www.zaiwen.top/#/chat/working-edition" target="_blank">https://www.zaiwen.top/#/chat/working-edition</a></p>
-        <p>ChatGPT：<a href="https://chat.openai.com/" target="_blank">https://chat.openai.com/</a></p>
-        <p>瑞达写作：<a href="https://www.ipapers.net/" target="_blank">https://www.ipapers.net/</a></p>
-        <p>讯飞智文：<a href="https://zhiwen.xfyun.cn/home" target="_blank">https://zhiwen.xfyun.cn/home</a></p>
-        <p>DreamINA：<a href="https://dreamina.jianying.com/ai-tool/home" target="_blank">https://dreamina.jianying.com/ai-tool/home</a></p>
-        <p>KREA-AI：<a href="https://www.krea.ai/home" target="_blank">https://www.krea.ai/home</a></p>
-        <p>KimiAI：<a href="https://kimi.moonshot.cn/" target="_blank">https://kimi.moonshot.cn/</a></p>
-        <p>Chandler：<a href="https://chandler.bet/#/overView" target="_blank">https://chandler.bet/#/overView</a></p>
-        <p>空间环境预报中心：<a href="http://www.sepc.ac.cn/" target="_blank">http://www.sepc.ac.cn/</a></p>
-        <p>SpaceX空间站对接：<a href="https://iss-sim.spacex.com/" target="_blank">https://iss-sim.spacex.com/</a></p>
-        <p>流星展示：<a href="https://www.meteorshowers.org/view/Lyrids" target="_blank">https://www.meteorshowers.org/view/Lyrids</a></p>
-        <p>NASA火星探索：<a href="https://eyes.nasa.gov/curiosity/" target="_blank">https://eyes.nasa.gov/curiosity/</a></p>
-        <p>交互式天空图：<a href="http://www.wikisky.org/" target="_blank">http://www.wikisky.org/</a></p>
-        <p>掌上宇宙：<a href="https://cocosmos.online/" target="_blank">https://cocosmos.online/</a></p>
-        <p>歌曲宝：<a href="https://gequbao.com/" target="_blank">https://gequbao.com/</a></p>
 
-        <p>这里是展开项的内容。</p>
+<h1>这里是电子的资源导向</h1>
+<h2>就不用CSS美化啦</h2>
+
+<button onclick="toggleContent('allNestedContent')">电子的edge收藏夹</button>
+
+<div id="allNestedContent" class="nested-content">
+    <div>
+        <button onclick="toggleContent('nested1')">Minecraft</button>
+        <div id="nested1" class="nested-content">
+            <p>ColorBlock：<a href="https://mc.ecylt.top/" target="_blank">https://mc.ecylt.top/</a></p>
+            <p>CurseForge-Mod：<a href="https://www.curseforge.com/minecraft" target="_blank">https://www.curseforge.com/minecraft</a>
+            </p>
+            <p>OpenFRP：<a href="https://console.openfrp.net/dashboard" target="_blank">https://console.openfrp.net/dashboard</a>
+            </p>
+        </div>
     </div>
+
+    <div>
+        <button onclick="toggleContent('nested2')">IT</button>
+        <div id="nested2" class="nested-content">
+            <p>GitHub：<a href="https://github.com/" target="_blank">https://github.com/</a></p>
+            <p>CodeForces：<a href="https://codeforces.com/" target="_blank">https://codeforces.com/</a></p>
+            <p>DotCpp：<a href="https://www.dotcpp.com/" target="_blank">https://www.dotcpp.com/</a></p>
+            <p>Numpy：<a href="https://numpy.org/" target="_blank">https://numpy.org/</a></p>
+            <p>菜鸟教程：<a href="https://www.runoob.com/" target="_blank">https://www.runoob.com/</a></p>
+            <p>AlternativeTo：<a href="https://alternativeto.net/" target="_blank">https://alternativeto.net/</a></p>
+            <p>TIOBE编程语言排行榜：<a href="https://tiobe.p2hp.com/" target="_blank">https://tiobe.p2hp.com/</a></p>
+            <p>神奇的Vue.js教程：<a href="https://scrimba.com/playlist/pXKqta" target="_blank">https://scrimba.com/playlist/pXKqta</a>
+            </p>
+            <p>Webflow：<a href="https://webflow.com/" target="_blank">https://webflow.com/</a></p>
+        </div>
+    </div>
+
+    <div>
+        <button onclick="toggleContent('nested3')">剪辑</button>
+        <div id="nested3" class="nested-content">
+            <p>LookAE：<a href="https://www.lookae.com/" target="_blank">https://www.lookae.com/</a></p>
+            <p>Doyoudo：<a href="https://doyoudo.com/free" target="_blank">https://doyoudo.com/free</a></p>
+            <p>音效网：<a href="https://www.aigei.com/" target="_blank">https://www.aigei.com/</a></p>
+            <p>歌曲宝：<a href="https://gequbao.com" target="_blank">https://gequbao.com/</a></p>
+        </div>
+    </div>
+
+    <div>
+        <button onclick="toggleContent('nested4')">资源</button>
+        <div id="nested4" class="nested-content">
+            <p>阿虚同学的储物间：<a href="https://axutongxue.gitee.io/" target="_blank">https://axutongxue.gitee.io/</a>
+            </p>
+            <p>考拉软件：<a href="https://www.rjctx.com/" target="_blank">https://www.rjctx.com/</a></p>
+            <p>Yandex：<a href="https://yandex.com/" target="_blank">https://yandex.com/</a></p>
+            <p>Tbox资源导航：<a href="https://www.tboxn.com/" target="_blank">https://www.tboxn.com/</a></p>
+            <p>Webflow：<a href="https://webflow.com/" target="_blank">https://webflow.com/</a></p>
+            <p>蓝奏云：<a href="https://pc.woozooo.com/" target="_blank">https://pc.woozooo.com/</a></p>
+            <p>FutureMe：<a href="https://www.futureme.org/" target="_blank">https://www.futureme.org/</a></p>
+            <p>ImgTP：<a href="https://www.imgtp.com/" target="_blank">https://www.imgtp.com/</a></p>
+        </div>
+    </div>
+
+    <div>
+        <button onclick="toggleContent('nested5')">天文</button>
+        <div id="nested5" class="nested-content">
+            <p>空间环境预报中心：<a href="http://www.sepc.ac.cn/" target="_blank">http://www.sepc.ac.cn/</a></p>
+            <p>SpaceX空间站对接：<a href="https://iss-sim.spacex.com/" target="_blank">https://iss-sim.spacex.com/</a>
+            </p>
+            <p>流星展示：<a href="https://www.meteorshowers.org/view/Lyrids" target="_blank">https://www.meteorshowers.org/view/Lyrids</a>
+            </p>
+            <p>NASA火星探索：<a href="https://eyes.nasa.gov/curiosity/"
+                               target="_blank">https://eyes.nasa.gov/curiosity/</a></p>
+            <p>交互式天空图：<a href="http://www.wikisky.org/" target="_blank">http://www.wikisky.org/</a></p>
+            <p>掌上宇宙：<a href="https://cocosmos.online/" target="_blank">https://cocosmos.online/</a></p>
+            <p>云地球：<a href="https://earth.giiiis.com/" target="_blank">https://earth.giiiis.com/</a></p>
+        </div>
+    </div>
+
+    <div>
+        <button onclick="toggleContent('nested6')">AI工具</button>
+        <div id="nested6" class="nested-content">
+            <p>在问AI：<a href="https://www.zaiwen.top/#/chat/working-edition" target="_blank">https://www.zaiwen.top/#/chat/working-edition</a>
+            </p>
+            <p>ChatGPT：<a href="https://chat.openai.com/" target="_blank">https://chat.openai.com/</a></p>
+            <p>瑞达写作：<a href="https://www.ipapers.net/" target="_blank">https://www.ipapers.net/</a></p>
+            <p>讯飞智文：<a href="https://zhiwen.xfyun.cn/home" target="_blank">https://zhiwen.xfyun.cn/home</a></p>
+            <p>DreamINA：<a href="https://dreamina.jianying.com/ai-tool/home" target="_blank">https://dreamina.jianying.com/ai-tool/home</a>
+            </p>
+            <p>KREA-AI：<a href="https://www.krea.ai/home" target="_blank">https://www.krea.ai/home</a></p>
+            <p>KimiAI：<a href="https://kimi.moonshot.cn/" target="_blank">https://kimi.moonshot.cn/</a></p>
+            <p>Chandler：<a href="https://chandler.bet/#/overView" target="_blank">https://chandler.bet/#/overView</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- ...重复其他嵌套项 -->
+
+    <div>
+        <button onclick="toggleContent('nested7')">Account</button>
+        <div id="nested7" class="nested-content">
+            <p>Microsoft：<a href="https://www.microsoft.com/zh-cn/" target="_blank">https://www.microsoft.com/zh-cn/</a>
+            </p>
+            <p>Outlook邮箱：<a href="https://outlook.live.com/mail/" target="_blank">https://outlook.live.com/mail/</a>
+            </p>
+            <p>Google邮箱：<a href="https://myaccount.google.com/" target="_blank">https://myaccount.google.com/</a></p>
+            <p>阿里云盘：<a href="https://www.aliyundrive.com/drive/file/backup" target="_blank">https://www.aliyundrive.com/drive/file/backup</a>
+            </p>
+            <p>诚通云盘：<a href="https://app.ctfile.com/#/private/all" target="_blank">https://app.ctfile.com/#/private/all</a>
+            </p>
+            <p>Unity：<a href="https://unity.com" target="_blank">https://unity.com</a></p>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
