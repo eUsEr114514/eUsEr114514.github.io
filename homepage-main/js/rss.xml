@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss version="2.0" xmlns="https://blogelectron.github.io"><channel><title>博客标题</title><link>https://blogelectron.github.io/</link><description>这是博客的简短描述。</description><item><title>博客文章标题1</title><link>https://blogelectron.github.io/post1</link><description>这是第一篇博客文章的简短描述。</description></item><item><title>博客文章标题2</title><link>https://blogelectron.github.io/post2</link><description>这是第二篇博客文章的简短描述。</description></item></channel></rss>
