@@ -7,7 +7,7 @@
 //     // 更新按钮中显示的点赞次数
 //     document.getElementById('likeCount').textContent = currentLikeCount;
 // }
-// 为点赞按钮添加点击事件监听器.f
+// 为点赞按钮添加点击事件监听器.fw
 document.getElementById('likeButton').addEventListener('click', like);
 
 function DownloadAllVideoFunction() {
