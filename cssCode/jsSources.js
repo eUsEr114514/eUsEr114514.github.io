@@ -8,3 +8,4 @@ document.querySelectorAll('.expandable').forEach(item => {
         }
     });
 });
+
