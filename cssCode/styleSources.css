@@ -1,9 +1,13 @@
-.edge {
-    display: none;
-}
-
-.expand-button {
+.expandable {
     cursor: pointer;
-    color: blue;
-    text-decoration: underline;
+    padding: 10px;
+    border: 1px solid #ccc;
+    user-select: none;
+}
+.expandable:hover {
+    background-color: #f9f9f9;
+}
+.content {
+    padding: 0 0 10px 20px;
+    display: none;
 }
