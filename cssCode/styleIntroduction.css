@@ -1,99 +1,130 @@
-* {
-    padding: 0;
+body, html {
     margin: 0;
+    padding: 0;
+    height: 100%;
 }
-/* border边框，padding内边距，margin外边距 */
-header {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    height: 10vh;
-}
-h1 {
-    position: absolute;
-    left: 120px;
+/*button {*/
+/*    z-index: 2;*/
+/*}*/
+.background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
     top: 0;
-    line-height: 75px;
-}
-.introduce {
-    height: 97.5vh;
-    background-image: url("picture/milky-way-3840x2160-15490.jpg");
-    background-color: antiquewhite;
-    background-repeat: no-repeat;
+    bottom: 0;
+    background-image: url('https://img2.imgtp.com/2024/05/03/ZAyXUuS0.jpg');
     background-size: cover;
     background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    z-index: 1; /* 背景图片位于底层 */
 }
-.introduce p {
-    font-size: 15px;
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */
+    padding: 20px;
+    border: 1px solid #000; /* 黑色边框 */
+    border-radius: 40px;
+    text-align: center;
+    z-index: 2; /* 内容区块位于背景图片之上 */
+    overflow: hidden; /* 防止模糊效果超出内容区块 */
+    width: 55%;
+    height: 45%;
+    /*overflow-y: scroll; !* 添加垂直滚动条 *!*/
 }
-footer {
-    background-color: rgb(76, 47, 47);
-    color: white;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* 与内容区块背景相同 */
+    filter: blur(75px); /* 应用模糊效果 */
+    z-index: -1; /* 模糊效果位于内容区块的底层 */
+    border-radius: 10px; /* 模糊效果的边界也具有圆角 */
+}
+.content img {
+    width: 50px;
+    height: 50px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    padding: 0px;
+    text-align: center;
+    z-index: 3;
+}
+.footer img {
+    max-width: 10vh; /* 音乐图片的最大宽度 */
+    max-height: 10vh; /* 音乐图片的最大高度 */
+    border-radius: 114px;
+}
+.footer audio {
+    width: 50%; /* 音乐播放器宽度 */
+    margin-top: 0px;
+}
+/* 隐藏垂直滚动条 */
+::-webkit-scrollbar {
+    display: none;
+}
+/* 自定义滚动条轨道 */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+/* 自定义滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+/* 模拟滚动内容 */
+.content {
+    height: 45%; /* 用于演示滚动效果 */
+    overflow-y: scroll;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* 半透明黑色背景 */
+    padding: 10px; /* 一些内边距 */
+    text-align: center;
+    overflow: hidden;
+    max-height: 0; /* 默认高度为0 */
+    transition: max-height 0.3s ease; /* 平滑过渡效果 */
 }
 
+.footer.expanded {
+    max-height: 150px; /* 展开时的最大高度，根据内容调整 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-section {
-    background-color: aqua;
-    border: 5px #458347 dashed;
-    padding: 25px;
-    margin:30px;
-    height:75px;
-    width:100%;
 }
-section a {
-    color:rgb(0, 0, 0);
-    text-decoration:none;
+
+.footer img {
+    max-width: 50px; /* 音乐图片的最大宽度，根据需要调整 */
+    max-height: 50px; /* 音乐图片的最大高度，根据需要调整 */
+    border-radius: 75px; /* 圆角 */
 }
-section li {
-    display:inline;
-    margin: right 4vw;
+
+.footer audio {
+    width: 100%; /* 音乐播放器宽度 */
+    margin-top: 10px;
 }
-section a:hover {
-    text-decoration:underline;
+button {
+    padding: 1% 2%; /* 按钮内部的空间 */
+    margin: 0.1%; /* 按钮外部的空间 */
+    background-color: #0051ff; /* 按钮的背景颜色 */
+    color: white; /* 按钮上文字的颜色 */
+    border: 1px solid #3498db; /* 按钮的边框颜色及样式 */
+    border-radius: 75px; /* 按钮的圆角 */
+    cursor: pointer; /* 鼠标悬停时显示为手形，表示可点击 */
+    font-size: 1%; /* 按钮上文字的大小 */
 }
-footer {
-    background-color: #d48a8a;
-    border:2px #246326 solid;
-    padding: 25px;
-    margin:30px;
+button:hover {
+    background-color: #a100ff; /* 鼠标悬浮时的背景颜色 */
+    border-color: #ebff00; /* 鼠标悬浮时的边框颜色 */
 }
-h1 {
-    color:white;
-}
-h2 {
-    color:red;
-    font-size:25px;
-} */
