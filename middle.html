@@ -11,21 +11,39 @@
             align-items: center;
             justify-content: center;
         }
-/*         a {
+
+        .link-block {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            margin: 10px;
+            border: 1px solid #ddd;
+            transition: transform 0.5s ease;
+        }
+
+        .link-block:hover {
+            transform: scale(1.1);
+        }
+
+        a {
             color: unset;
             text-decoration: none;
-            transition: all 0.5s;
-        } */
+            font-size: 1.5em;
+        }
     </style>
 </head>
 <body>
-    <main>
-        <section>
-            <h1>且慢！</h1>
-            <h2>这里有两个选择</h2>
+<main>
+    <section>
+        <h1>且慢！</h1>
+        <h2>这里有两个选择</h2>
+        <div class="link-block">
             <a href="introduction.html">自己写的网页</a>
+        </div>
+        <div class="link-block">
             <a href="homepage-main/index.html">开源项目改编的网页</a>
-        </section>
-    </main>
+        </div>
+    </section>
+</main>
 </body>
 </html>
