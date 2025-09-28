@@ -5,7 +5,7 @@ var typed = new Typed('#hi', {
         "from Guangdong, China.",
         "a student.",
         "good at loaf on the job.",
-        "a cliper.",
+        "a editor.",
         "a bilibili up.",
         "everything",
         "......?"
@@ -59,8 +59,4 @@ function goProjects() {
     $("#projectsの").show();
     $("#blogの").hide();
     $("#homeの").hide();
-}
-
-function print() {
-    alert("QQ：316951535")
 }
