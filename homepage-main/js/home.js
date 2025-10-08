@@ -4,8 +4,8 @@ var typed = new Typed('#hi', {
         "电子Electron.",
         "from Guangdong, China.",
         "a student.",
-        "good at loaf on the job.",
-        "a editor.",
+        "multiemotional idealist.",
+        "a editor(or creator?).",
         "a bilibili up.",
         "everything",
         "......?"
